@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  webapp:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    # command: python gradio_app.py --model ./ckpts/M2UGen/MusicGen --llama_dir ./ckpts/LLaMA --music_decoder musicgen
+
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+              - driver: nvidia
+                device_ids: ['0']
+                capabilities: [compute, utility]
