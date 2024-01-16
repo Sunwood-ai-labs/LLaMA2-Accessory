@@ -167,3 +167,4 @@ tokenizer.model
 *.swp
 
 .asset/
+**.pth
