@@ -8,7 +8,7 @@ import torch
 # the configurations by explicitly specifying the arguments
 model = SPHINXModel.from_pretrained(pretrained_path="/app/finetune/mm/SPHINX/SPHINX-Tiny", with_visual=True)
 
-image = Image.open("examples/1.jpg")
+image = Image.open("examples/3.jpg")
 qas = [["What's in the image?", None]]
 
 response = model.generate_response(qas, image, max_gen_len=1024, temperature=0.9, top_p=0.5, seed=0)
