@@ -23,7 +23,7 @@ RUN pip install git+https://github.com/facebookresearch/segment-anything.git
 
 # install LLaMA2-Accessory 
 RUN pip install -e .
-RUN pip uninstall apex
+RUN pip uninstall -y apex
 
 
 
